@@ -13,7 +13,8 @@ services:
     volumes:
       - db:/var/lib/mysql
   app:
-    depends_on:      - mysqldb
+    depends_on:
+      - mysqldb
     build: ./docker-demo
     restart: on-failure
     env_file: ./.env
